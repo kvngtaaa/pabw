@@ -5,3 +5,13 @@ user = [
 ]
 
 nama = input("Masukkan nama yang ingin dicari: ")
+
+for i in user:
+    if i["nama"].lower() == nama.lower():
+        print(f"Data lengkap {nama}:")
+        print(f"NIK            : {i['nik']}")
+        print(f"Jenis Kelamin  : {i['jenis_kelamin']}")
+        print(f"Tanggal Lahir  : {i['tanggal_lahir']}")
+        break
+else:
+    print("Data tidak ada")
